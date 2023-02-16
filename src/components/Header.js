@@ -1,12 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../assets/img/StreetFood.png";
 
 const Title = () => (
   <a href="/">
-    <img
-      className="logo"
-      src="https://yt3.googleusercontent.com/ytc/AMLnZu_EC-ECXAxRAixWGEfMsE1rdSoetBHyxmLNdtCB=s176-c-k-c0x00ffffff-no-rj"
-      alt="logo"
-    />
+    <img className="logo" src={Logo} alt="logo" />
   </a>
 );
 
@@ -17,9 +15,16 @@ const Header = () => {
       <Title />
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+
+          <Link to="/about">
+            <li>About</li>
+          </Link>
+          <Link to="/contact">
+            <li>Contact</li>
+          </Link>
           <li>Cart</li>
         </ul>
       </div>
