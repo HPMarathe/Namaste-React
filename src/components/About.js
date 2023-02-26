@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Profile from "./Profile";
 import ProfileFunctional from "./Profile";
 
 class About extends Component {
@@ -18,7 +19,7 @@ class About extends Component {
         <p>
           This is the Namaste React Live Course Chapter 07 - Finding the Path 🚀
         </p>
-        <ProfileFunctional />
+        <Profile />
       </div>
     );
   }
