@@ -5,7 +5,7 @@ import useOnline from "../utils/useOnline";
 
 const Title = () => (
   <a href="/">
-    <img className="logo" src={Logo} alt="logo" />
+    <img className="h-28 p-2" src={Logo} alt="logo" />
   </a>
 );
 
@@ -13,22 +13,22 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const isOnline = useOnline();
   return (
-    <div className="header">
+    <div className="flex justify-between bg-pink-50 shadow-lg sm:bg-blue-50 md:bg-yellow-50">
       <Title />
       <div className="nav-items">
-        <ul>
-          <li>
+        <ul className="flex py-10">
+          <li className="px-2">
             <Link to="/">Home</Link>
           </li>
 
           <Link to="/about">
-            <li>About</li>
+            <li className="px-2">About</li>
           </Link>
           <Link to="/contact">
-            <li>Contact</li>
+            <li className="px-2">Contact</li>
           </Link>
           <Link to="/instamart">
-            <li>Instamart</li>
+            <li className="px-2">Instamart</li>
           </Link>
         </ul>
       </div>
