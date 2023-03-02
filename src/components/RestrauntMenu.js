@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "../constants";
+import useRestaurant from "../utils/useRestaurant";
 import Shimmer from "./Shimmer";
-import { useRestaurant } from "../utils/useRestaurant";
 const RestaurantMenu = () => {
   // how to read a dynamic URL params
   const { resId } = useParams();
