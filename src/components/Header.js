@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Logo from "../assets/img/Speedyeats.png";
+import Logo from "../assets/img/zomato.png";
 import useOnline from "../utils/useOnline";
 import UserContext from "../utils/UserContext";
 
@@ -22,35 +22,44 @@ const Header = () => {
 
   console.log(cartItems);
   return (
-    <div className="flex justify-between bg-pink-50 shadow-lg sm:bg-blue-50 md:bg-yellow-50">
+    <div className="flex justify-between bg-red-500 shadow-lg ">
       <Title />
-      <div className="nav-items">
-        <ul className="flex py-10">
-          <li className="px-2">
+      <div className="nav-items py-11">
+        <ul className="flex ">
+          <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
             <Link to="/">Home</Link>
           </li>
 
           <Link to="/about">
-            <li className="px-2">About</li>
+            <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl ">
+              About
+            </li>
           </Link>
-          <Link to="/contact">
+          {/* <Link to="/contact">
             <li className="px-2">Contact</li>
-          </Link>
+          </Link> */}
           <Link to="/instamart">
-            <li className="px-2">Instamart</li>
+            <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
+              Instamart
+            </li>
           </Link>
           <Link to="/cart">
-            <li className="px-2">Cart-{cartItems.length} items</li>
+            <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
+              Cart-{cartItems.length} items
+            </li>
           </Link>
         </ul>
       </div>
-      <h1>{isOnline ? "✅" : "🔴"}</h1>
-      <span className="p-10 font-bold text-red-900">{user.name}</span>
-      {isLoggedIn ? (
-        <button onClick={() => setIsLoggedIn(false)}>Logout</button>
-      ) : (
-        <button onClick={() => setIsLoggedIn(true)}>Login</button>
-      )}
+      <span className="p-10 self-center font-bold text-rose-100">
+        Welcome , {user.name}
+      </span>
+      <div className="self-center px-2  text-white hover:text-black hover:bg-white rounded-2xl mx-16">
+        {isLoggedIn ? (
+          <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+        ) : (
+          <button onClick={() => setIsLoggedIn(true)}>Login</button>
+        )}
+      </div>
     </div>
   );
 };

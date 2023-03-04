@@ -64,10 +64,10 @@ const appRouter = createBrowserRouter([
         path: "/",
         element: <Body />,
       },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
+      // {
+      //   path: "/contact",
+      //   element: <Contact />,
+      // },
       {
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
